@@ -25,12 +25,23 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install MkDocs and Material theme
+        run: |
+          pip install mkdocs
+          pip install mkdocs-material
+
+      - name: Build MkDocs project
+        run: mkdocs build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.' # Path to your build output directory
+          path: 'site' # Path to your build output directory
 
       - name: Deploy to GitHub Pages
         id: deployment
