@@ -6,6 +6,10 @@ This page documents an interaction with an LLM to set up and configure an MkDocs
 
 ### Prompt 1
 
+**WonderChat Screenshot of Initial Prompt and Response**
+
+![WonderChat Screenshot of Initial Prompt and Response](wonderchat-mkdocs-init.png)
+
 ```
 Let’s setup a mkdocs project. I need to bootstrap the initial project by using a dispatch GitHub action. The action should checkout the triggering repo, initialize a brand new mkdocs project into top level directory of the repo. Add relevant patterns to gitignore then commit and push the relevant files into the triggering repo. If possible I want the setup to use the mkdocs-material theme.
 ```
