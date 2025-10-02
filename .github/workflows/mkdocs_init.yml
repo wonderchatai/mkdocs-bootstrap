@@ -6,6 +6,8 @@ on:
 jobs:
   setup-mkdocs:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Grant write permissions for pushing changes
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
