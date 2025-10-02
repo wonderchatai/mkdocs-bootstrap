@@ -1,3 +1,5 @@
 site_name: My Docs
 theme: material
-theme: material
+nav:
+  - Home: index.md
+  - LLM Interaction Log: llm-interaction-log.md
