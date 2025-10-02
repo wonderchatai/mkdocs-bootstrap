@@ -1,5 +1,7 @@
 site_name: My Docs
 theme: material
+extra_css:
+  - overrides/css/custom.css
   custom_dir: docs/overrides
 nav:
   - Home: index.md
