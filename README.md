@@ -10,6 +10,8 @@
 
 This project provides a streamlined approach to setting up and deploying an MkDocs documentation site with the `mkdocs-material` theme, entirely automated through GitHub Actions.
 
+[View the published documentation here](https://wonderchatai.github.io/mkdocs-bootstrap)
+
 ### GitHub Actions Workflows:
 
 1.  **`mkdocs_init.yml` (Manual Dispatch):**
