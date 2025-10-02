@@ -1,8 +1,9 @@
-site_name: My Docs
-theme: material
-extra_css:
-  - overrides/css/custom.css
+site_name: bootstrapping mkdocs on your phone with WonderChat
+theme:
+  name: material
   custom_dir: docs/overrides
+extra_css:
+    - overrides/css/custom.css
 nav:
   - Home: index.md
   - LLM Interaction Log: llm-interaction-log.md
