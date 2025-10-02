@@ -1,5 +1,6 @@
 site_name: My Docs
 theme: material
+  custom_dir: docs/overrides
 nav:
   - Home: index.md
   - LLM Interaction Log: llm-interaction-log.md
