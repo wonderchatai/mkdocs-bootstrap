@@ -1,0 +1,44 @@
+name: Initialize MkDocs Project
+
+on:
+  workflow_dispatch:
+
+jobs:
+  setup-mkdocs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Get all history to be able to commit and push
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install MkDocs and Material theme
+        run: |
+          pip install mkdocs
+          pip install mkdocs-material
+
+      - name: Initialize MkDocs project
+        run: |
+          mkdocs new .
+
+      - name: Configure MkDocs for Material theme
+        run: |
+          sed -i '/^site_name:/a theme: material' mkdocs.yml
+
+      - name: Add .gitignore entries
+        run: |
+          echo "site/" >> .gitignore
+          echo ".DS_Store" >> .gitignore
+
+      - name: Stage changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "feat: Initialize MkDocs project with Material theme"
+          git push
